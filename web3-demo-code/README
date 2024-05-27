@@ -1,0 +1,10 @@
+# 环境
+- Truffle v5.11.5 (core: 5.11.5)
+- Ganache v7.9.1
+- Solidity - 0.8.21 (solc-js)
+- Node v16.14.0
+- Web3.js v1.10.0
+# 运行
+1. 首先要运行  ganache -d
+2. (删除build 文件后, 按需)truffle develop --> truffle compile --> truffle migrate 
+3. 尝试运行：truffle exec .\script\test.js
