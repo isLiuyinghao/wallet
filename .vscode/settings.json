@@ -1,5 +1,6 @@
 {
     "liveServer.settings.port": 5501,
-    "solidity.compileUsingLocalVersion": "d:\\Project\\wallet\\soljson-v0.8.21+commit.d9974bed.js",
-    "solidity.compileUsingRemoteVersion": "v0.5.15+commit.6a57276f"
+    "solidity.compileUsingRemoteVersion": "v0.7.0+commit.9e61f92b",
+    "solidity.defaultCompiler": "localFile",
+    "solidity.compileUsingLocalVersion": "d:\\Project\\wallet\\soljson-v0.7.6+commit.7338295f.js"
 }

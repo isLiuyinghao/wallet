@@ -6,5 +6,5 @@
 - Web3.js v1.10.0
 # 运行
 1. 首先要运行  ganache -d
-2. (删除build 文件后, 按需)truffle develop --> truffle compile --> truffle migrate 
+2. (删除build 文件后, 按需)truffle develop --> truffle compile --> truffle migrate (如果是新的话 要重新发布一下 truffle migrate --reset )
 3. 尝试运行：truffle exec .\script\test.js
