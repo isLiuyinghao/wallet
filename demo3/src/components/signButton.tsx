@@ -47,8 +47,10 @@ const index: React.FC = () => {
             types,
         },
             { 
-                onSuccess: () => {
-                    
+                onSuccess: (data: any, variables: SignTypedDataVariables, context: any,) => {
+                    console.log(data)
+                    console.log(variables)
+                    console.log(context)
                     alert('成功了！')
                 },
                 onError: () => {
