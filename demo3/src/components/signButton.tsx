@@ -1,11 +1,11 @@
 import React from 'react';
-import { SignTypedDataErrorType } from 'viem';
 import { useAccount, useSignTypedData } from 'wagmi'
 import { SignTypedDataVariables } from 'wagmi/query';
 
 // 脚手架示例组件
-const index: React.FC = () => {
+export default function SignButton() {
     const { chain } = useAccount()
+    const { signTypedData } = useSignTypedData()
     const domain = {
         name: 'Ether Mail',
         version: '1',
@@ -37,26 +37,16 @@ const index: React.FC = () => {
         contents: 'Hello, Bob!',
     } as const
 
-    const { signTypedData } = useSignTypedData()
 
-    function sign() {
-        signTypedData({
+    async function sign() {
+        const result = await signTypedData({
             domain,
             message,
             primaryType: 'Mail',
             types,
-        },
-            { 
-                onSuccess: (data: any, variables: SignTypedDataVariables, context: any,) => {
-                    console.log(data)
-                    console.log(variables)
-                    console.log(context)
-                    alert('成功了！')
-                },
-                onError: () => {
-                    alert('失败了！')
-                }
-            })
+        })
+
+        console.log(result)
     }
 
     return (
@@ -64,4 +54,3 @@ const index: React.FC = () => {
     );
 };
 
-export default index;
